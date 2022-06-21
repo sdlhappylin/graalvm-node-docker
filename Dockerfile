@@ -9,5 +9,4 @@ RUN curl -L https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22
 	| tar -xz --strip-components=1 -C /usr/local && \ 
     java --version && gu install nodejs && npm install -g npm@latest --force  && \
 	rm -rf /var/lib/apt/lists/*
-ENTRYPOINT [/usr/local/bin/node]
 CMD [node -v]
